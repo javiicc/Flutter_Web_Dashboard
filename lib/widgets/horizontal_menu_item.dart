@@ -19,6 +19,7 @@ class HorizontalMenuItem extends StatelessWidget {
         onTap: onTap,
         onHover: (value) {
           value
+              // ~~ The method bellow change an OBSERVABLE variable ~~
               ? menuController.onHover(itemName)
               : menuController.onHover("not hovering");
         },
@@ -30,7 +31,7 @@ class HorizontalMenuItem extends StatelessWidget {
                 Visibility(
                     visible: menuController.isHovering(itemName) ||
                         menuController.isActive(itemName),
-                    maintainSize: true,
+                    maintainSize: false,
                     maintainState: true,
                     maintainAnimation: true,
                     child: Container(width: 6, height: 40, color: dark)),

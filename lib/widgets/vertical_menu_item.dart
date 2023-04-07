@@ -32,7 +32,7 @@ class VerticalMenuItem extends StatelessWidget {
                 Visibility(
                     visible: menuController.isHovering(itemName) ||
                         menuController.isActive(itemName),
-                    maintainSize: true,
+                    maintainSize: false,
                     maintainState: true,
                     maintainAnimation: true,
                     child: Container(width: 3, height: 72, color: dark)),

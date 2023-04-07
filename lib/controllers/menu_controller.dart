@@ -15,10 +15,12 @@ class MenuController extends GetxController {
   var hoverItem = "".obs;
 
   changeActiveTo(String itemName) {
+    // ~~ Changes and OBSERVABLE variable ~~
     activeItem.value = itemName;
   }
 
   onHover(String itemName) {
+    // ~~ Changes and OBSERVABLE variable ~~
     if (!isActive(itemName)) hoverItem.value = itemName;
   }
 
@@ -36,7 +38,7 @@ class MenuController extends GetxController {
       case clientsPageRoute:
         return _customIcon(Icons.people_alt_outlined, itemName);
       case authenticationPageRoute:
-        return _customIcon(Icons.drive_eta, itemName);
+        return _customIcon(Icons.exit_to_app, itemName);
       default:
         return _customIcon(Icons.exit_to_app, itemName);
     }

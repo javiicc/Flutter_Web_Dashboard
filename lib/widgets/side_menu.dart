@@ -24,7 +24,7 @@ class SideMenu extends StatelessWidget {
             Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 40,
                 ),
                 Row(
@@ -32,12 +32,12 @@ class SideMenu extends StatelessWidget {
                     SizedBox(width: _width / 48),
                     Padding(
                       padding: const EdgeInsets.only(right: 12),
-                      child: Image.asset("assets/icons/logo.png"),
+                      child: Image.asset("assets/icons/logo_1.png"),
                     ),
                     Flexible(
                       child: CustomText(
-                        text: "Dash",
-                        size: 20,
+                        text: "Dashhh",
+                        size: 50,
                         weight: FontWeight.bold,
                         color: active,
                       ),
@@ -45,13 +45,14 @@ class SideMenu extends StatelessWidget {
                     SizedBox(width: _width / 48),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
               ],
             ),
+          // The Column above is not visible yet because is not related to SmallScreen()
           Divider(
-            color: lightGrey.withOpacity(.1),
+            color: lightGrey.withOpacity(.9),
           ),
           Column(
             mainAxisSize: MainAxisSize.min,
