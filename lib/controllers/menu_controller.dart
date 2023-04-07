@@ -15,7 +15,7 @@ class MenuController extends GetxController {
   var hoverItem = "".obs;
 
   changeActiveTo(String itemName) {
-    // ~~ Changes and OBSERVABLE variable ~~
+    // ~~ Changes and OBSERVABLE variable ~~_
     activeItem.value = itemName;
   }
 
