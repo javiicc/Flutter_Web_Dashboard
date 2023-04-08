@@ -10,14 +10,14 @@ class RevenueSectionLarge extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(24),
-      margin: EdgeInsets.symmetric(vertical: 30),
+      padding: const EdgeInsets.all(24),
+      margin: const EdgeInsets.symmetric(vertical: 30),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(8),
         boxShadow: [
           BoxShadow(
-              offset: Offset(0, 6),
+              offset: const Offset(0, 6),
               color: lightGrey.withOpacity(.1),
               blurRadius: 12)
         ],
@@ -35,7 +35,7 @@ class RevenueSectionLarge extends StatelessWidget {
                   weight: FontWeight.bold,
                   color: lightGrey,
                 ),
-                Container(
+                SizedBox(
                     width: 600,
                     height: 200,
                     child: SimpleBarChart.withSampleData()),
@@ -63,11 +63,11 @@ class RevenueSectionLarge extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 Row(
-                  children: [
+                  children: const [
                     RevenueInfo(
                       title: "Last 30 days",
                       amount: "3,230",
