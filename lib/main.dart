@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_dashboard/constants/style.dart';
+import 'package:flutter_web_dashboard/pages/authentication/authentication.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
             TargetPlatform.android: FadeUpwardsPageTransitionsBuilder()
           }),
           primaryColor: Colors.blue),
-      home: SiteLayout(),
+      home: const AuthenticationPage(),
     );
   }
 }
