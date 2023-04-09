@@ -1,45 +1,45 @@
-// const rootRoute = "/";
+const rootRoute = "/";
 
-// const overviewPageDisplayName = "Overview";
-// const overviewPageRoute = "/overview";
+const overviewPageDisplayName = "Overview";
+const overviewPageRoute = "/overview";
 
-// const driversPageDisplayName = "Drivers";
-// const driversPageRoute = "/drivers";
+const driversPageDisplayName = "Drivers";
+const driversPageRoute = "/drivers";
 
-// const clientsPageDisplayName = "Clients";
-// const clientsPageRoute = "/clients";
+const clientsPageDisplayName = "Clients";
+const clientsPageRoute = "/clients";
 
-// const authenticationPageDisplayName = "Log out";
-// const authenticationPageRoute = "/auth";
+const authenticationPageDisplayName = "Log out";
+const authenticationPageRoute = "/auth";
 
-const overviewPageRoute = "Overview";
+// const overviewPageRoute = "Overview";
 
-const driversPageRoute = "Drivers";
+// const driversPageRoute = "Drivers";
 
-const clientsPageRoute = "Clients";
+// const clientsPageRoute = "Clients";
 
-const authenticationPageRoute = "Authentication";
+// const authenticationPageRoute = "Authentication";
 
-const logOutPageRoute = "Log Out";
+// const logOutPageRoute = "Log Out";
 
-List sideMenuItems = [
-  overviewPageRoute,
-  driversPageRoute,
-  clientsPageRoute,
-  // authenticationPageRoute,
-  logOutPageRoute
-];
-
-// class MenuItem {
-//   final String name;
-//   final String route;
-
-//   MenuItem(this.name, this.route);
-// }
-
-// List<MenuItem> sideMenuItemRoutes = [
-//   MenuItem(overviewPageDisplayName, overviewPageRoute),
-//   MenuItem(driversPageDisplayName, driversPageRoute),
-//   MenuItem(clientsPageDisplayName, clientsPageRoute),
-//   MenuItem(authenticationPageDisplayName, authenticationPageRoute),
+// List sideMenuItems = [
+//   overviewPageRoute,
+//   driversPageRoute,
+//   clientsPageRoute,
+//   // authenticationPageRoute,
+//   logOutPageRoute
 // ];
+
+class MenuItem {
+  final String name;
+  final String route;
+
+  MenuItem(this.name, this.route);
+}
+
+List<MenuItem> sideMenuItemRoutes = [
+  MenuItem(overviewPageDisplayName, overviewPageRoute),
+  MenuItem(driversPageDisplayName, driversPageRoute),
+  MenuItem(clientsPageDisplayName, clientsPageRoute),
+  MenuItem(authenticationPageDisplayName, authenticationPageRoute),
+];

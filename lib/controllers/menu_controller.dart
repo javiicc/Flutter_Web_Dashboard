@@ -12,7 +12,7 @@ class MenuController extends GetxController {
 
   // Observable properties
   // The default active item is the Overview page
-  var activeItem = overviewPageRoute.obs;
+  var activeItem = overviewPageDisplayName.obs;
   var hoverItem = "".obs;
 
   // static MenuController instance = Get.put(MenuController());
@@ -34,13 +34,13 @@ class MenuController extends GetxController {
 
   Widget returnIconFor(String itemName) {
     switch (itemName) {
-      case overviewPageRoute:
+      case overviewPageDisplayName:
         return _customIcon(Icons.trending_up, itemName);
-      case driversPageRoute:
+      case driversPageDisplayName:
         return _customIcon(Icons.drive_eta, itemName);
-      case clientsPageRoute:
+      case clientsPageDisplayName:
         return _customIcon(Icons.people_alt_outlined, itemName);
-      case authenticationPageRoute:
+      case authenticationPageDisplayName:
         return _customIcon(Icons.exit_to_app, itemName);
       // case logOutPageRoute:
       //   return _customIcon(Icons.exit_to_app, itemName);

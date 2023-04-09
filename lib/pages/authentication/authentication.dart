@@ -92,8 +92,8 @@ class AuthenticationPage extends StatelessWidget {
               ),
               InkWell(
                 onTap: () {
-                  // Get.offAllNamed(rootRoute); // rootRoute
-                  Get.offAll(() => SiteLayout());
+                  Get.offAllNamed(rootRoute);
+                  // Get.offAll(() => SiteLayout());
                 },
                 child: Container(
                   decoration: BoxDecoration(

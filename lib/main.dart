@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_dashboard/constants/style.dart';
+import 'package:flutter_web_dashboard/pages/404/error_page.dart';
 import 'package:flutter_web_dashboard/pages/authentication/authentication.dart';
+import 'package:flutter_web_dashboard/routing/routes.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -20,8 +22,24 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      initialRoute: authenticationPageRoute,
+      unknownRoute: GetPage(
+          name: '/not-found',
+          page: () => PageNotFound(),
+          transition: Transition.fadeIn),
+      getPages: [
+        // If the route is the rootRoute it returns SiteLayout()
+        GetPage(
+            name: rootRoute,
+            page: () {
+              return SiteLayout();
+            }),
+        // If the route is authenicationPageRoute it returns AuthenticationPage()
+        GetPage(
+            name: authenticationPageRoute, page: () => AuthenticationPage()),
+      ],
       debugShowCheckedModeBanner: false,
-      title: "Dash",
+      title: "Dashboard",
       theme: ThemeData(
           scaffoldBackgroundColor: light,
           textTheme: GoogleFonts.mulishTextTheme(Theme.of(context).textTheme)
@@ -31,7 +49,7 @@ class MyApp extends StatelessWidget {
             TargetPlatform.android: FadeUpwardsPageTransitionsBuilder()
           }),
           primaryColor: Colors.blue),
-      home: const AuthenticationPage(),
+      // home: const AuthenticationPage(),
     );
   }
 }

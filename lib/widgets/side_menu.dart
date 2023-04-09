@@ -57,22 +57,25 @@ class SideMenu extends StatelessWidget {
           ),
           Column(
             mainAxisSize: MainAxisSize.min,
-            children: sideMenuItems // sideMenuItemRoutes
-                .map((itemName) => SideMenuItem(
+            children: sideMenuItemRoutes // sideMenuItemRoutes
+                .map((item) => SideMenuItem(
                       // item
-                      itemName: itemName, // item.name
+                      itemName: item.name, // item.name
                       onTap: () {
                         // Global Navigation
-                        if (itemName == authenticationPageRoute) {
-                          Get.offAll(() => const AuthenticationPage());
+                        if (item.name == authenticationPageRoute) {
+                          // Get.offAll(() => const AuthenticationPage());
+                          menuController
+                              .changeActiveTo(overviewPageDisplayName);
+                          Get.offAllNamed(authenticationPageRoute);
                         }
                         // Local Navigation
-                        if (!menuController.isActive(itemName)) {
-                          menuController.changeActiveTo(itemName);
+                        if (!menuController.isActive(item.name)) {
+                          menuController.changeActiveTo(item.name);
                           if (ResponsiveWidget.isSmallScreen(context)) {
                             Get.back();
                           }
-                          navigationController.navigateTo(itemName);
+                          navigationController.navigateTo(item.route);
                         }
                       },
                     ))
